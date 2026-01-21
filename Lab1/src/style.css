@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0066ff, #00d9ff);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0052cc, #00aced);
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #00d9ff !important;
+}
+
+/* Hero Carousel */
+.carousel-section {
+    margin-top: 56px;
+}
+
+.carousel-item {
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.hero-caption {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 30px !important;
+    animation: slideInUp 1s ease;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.8s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.col-lg-6:nth-child(1) .fade-in {
+    animation-delay: 0.1s;
+}
+
+.col-lg-6:nth-child(2) .fade-in {
+    animation-delay: 0.3s;
+}
+
+.row.g-4 .fade-in {
+    animation-delay: calc(0.1s * var(--index, 1));
+}
+
+/* Feature Boxes */
+.feature-box {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Cards */
+.book-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.book-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.book-card img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover img {
+    transform: scale(1.05);
+}
+
+.rating {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.card-footer .btn {
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.card-footer .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Facilities Section */
+.facility-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.facility-card img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.facility-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact Form */
+.contact-form .form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: #0066ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 102, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.contact-form .form-label {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-form .btn {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.3);
+}
+
+/* Info Boxes */
+.info-box {
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.info-box:hover {
+    background: white;
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Links */
+.social-links .btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links .btn:hover {
+    transform: translateY(-5px) rotate(10deg);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    transform: scale(1.2);
+    color: #00d9ff !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px;
+    }
+
+    .hero-caption h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+
+    .feature-box {
+        margin-bottom: 15px;
+    }
+
+    .social-links .btn {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        height: 200px;
+    }
+
+    .hero-caption {
+        padding: 15px !important;
+    }
+
+    .hero-caption h1 {
+        font-size: 1.3rem !important;
+    }
+
+    .hero-caption p {
+        font-size: 0.9rem;
+    }
+
+    .row.g-4 {
+        row-gap: 1.5rem !important;
+    }
+}
